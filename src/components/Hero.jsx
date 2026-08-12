@@ -86,9 +86,9 @@ export default function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-4 leading-tight tracking-tight">
-          <span className="text-white">Hafiz </span>
-          <span className="text-gradient">Rabi-Us-Saim</span>
+        <h1 className="text-3xl min-[380px]:text-4xl min-[480px]:text-5xl sm:text-6xl md:text-7xl font-black mb-4 leading-tight tracking-tight">
+          <span className="text-white block sm:inline">Hafiz </span>
+          <span className="text-gradient block sm:inline-block whitespace-nowrap">Rabi-Us-Saim</span>
         </h1>
 
         {/* Animated role */}
