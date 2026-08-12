@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   Menu, X, Code2, Layers, BookOpen, Briefcase, Mail, Home
 } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { id: 'hero', label: 'Home', icon: Home },
@@ -67,22 +68,29 @@ export default function Navbar() {
                 {item.label}
               </button>
             ))}
-            <a
-              href="mailto:hafizrabiussaim@gmail.com"
-              className="btn-primary text-sm"
-            >
-              <span>Hire Me</span>
-            </a>
+            <div className="flex items-center gap-3">
+              <ThemeToggle />
+              <a
+                href="mailto:hafizrabiussaim@gmail.com"
+                className="btn-primary text-sm"
+              >
+                <span>Hire Me</span>
+              </a>
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden text-slate-400 hover:text-white transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile header controls */}
+          <div className="flex md:hidden items-center gap-3">
+            <ThemeToggle />
+            <button
+              className="text-slate-400 hover:text-white transition-colors"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
