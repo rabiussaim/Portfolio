@@ -360,20 +360,30 @@
 
 /* --- Light Mode CSS Override Layer --- */
 .light {
-  .text-white:not(.btn-primary *, .skill-badge, .bg-gradient-to-br *, .bg-blue-600 *, .bg-cyan-500 *, .bg-violet-600 *, .btn-outline:hover) {
-    color: var(--text-primary);
+  .text-white {
+    color: var(--text-primary) !important;
+  }
+  
+  /* Retain white text for solid-background buttons and icon wrappers */
+  .btn-primary,
+  .btn-primary *,
+  .btn-outline:hover,
+  .w-24.h-24.rounded-full,
+  .w-24.h-24.rounded-full *,
+  svg.text-white {
+    color: #ffffff !important;
   }
   
   .text-slate-100 {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
   }
   
   .text-slate-300 {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
   }
   
   .text-slate-400 {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
   }
 
   .text-slate-500 {
